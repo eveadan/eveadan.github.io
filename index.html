@@ -9,17 +9,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
-
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+  * { margin:0; padding:0; box-sizing:border-box; }
 
   body {
     font-family: 'Inter', sans-serif;
-    background-color: #f8f6f3;
-    color: #1a1a1a;
+    background-color: #121212;
+    color: #f2f2f2;
     scroll-behavior: smooth;
   }
 
@@ -27,28 +22,25 @@
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(248, 246, 243, 0.9);
-    backdrop-filter: blur(8px);
+    background: rgba(18,18,18,0.95);
     display: flex;
     justify-content: center;
     padding: 20px 0;
     z-index: 1000;
-    border-bottom: 1px solid #e5e2dd;
+    border-bottom: 1px solid #333;
   }
 
   nav a {
     margin: 0 25px;
     text-decoration: none;
-    color: #1a1a1a;
+    color: #f2f2f2;
     font-size: 14px;
     letter-spacing: 1px;
     text-transform: uppercase;
     transition: opacity 0.3s ease;
   }
 
-  nav a:hover {
-    opacity: 0.6;
-  }
+  nav a:hover { opacity: 0.6; }
 
   section {
     min-height: 100vh;
@@ -62,14 +54,9 @@
     transition: all 1s ease;
   }
 
-  section.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  section.visible { opacity: 1; transform: translateY(0); }
 
-  .container {
-    max-width: 900px;
-  }
+  .container { max-width: 900px; }
 
   h1 {
     font-family: 'Playfair Display', serif;
@@ -77,12 +64,14 @@
     font-weight: 700;
     margin-bottom: 20px;
     letter-spacing: -1px;
+    color: #f8f6f3;
   }
 
   h2 {
     font-family: 'Playfair Display', serif;
     font-size: 2.2rem;
     margin-bottom: 40px;
+    color: #f8f6f3;
   }
 
   p {
@@ -90,6 +79,7 @@
     line-height: 1.8;
     margin-bottom: 20px;
     font-weight: 300;
+    color: #ddd;
   }
 
   .subtitle {
@@ -98,54 +88,49 @@
     text-transform: uppercase;
     margin-bottom: 30px;
     opacity: 0.7;
+    color: #bbb;
   }
 
   .divider {
     width: 60px;
     height: 1px;
-    background: #1a1a1a;
+    background: #f2f2f2;
     margin: 30px auto;
   }
 
   a {
-    color: #1a1a1a;
+    color: #f2f2f2;
     text-decoration: none;
-    border-bottom: 1px solid #1a1a1a;
+    border-bottom: 1px solid #f2f2f2;
     padding-bottom: 2px;
     transition: all 0.3s ease;
   }
 
-  a:hover {
-    opacity: 0.6;
-  }
+  a:hover { opacity: 0.6; }
 
-  .project {
-    margin-bottom: 50px;
-  }
+  .project { margin-bottom: 50px; }
 
   .btn {
     display: inline-block;
     margin-top: 30px;
     padding: 12px 35px;
-    border: 1px solid #1a1a1a;
+    border: 1px solid #f2f2f2;
     text-transform: uppercase;
     font-size: 12px;
     letter-spacing: 2px;
     transition: all 0.3s ease;
+    color: #f2f2f2;
   }
 
-  .btn:hover {
-    background: #1a1a1a;
-    color: #f8f6f3;
-  }
+  .btn:hover { background: #f2f2f2; color: #121212; }
 
   footer {
     text-align: center;
     padding: 40px 0;
     font-size: 0.8rem;
     opacity: 0.6;
+    color: #bbb;
   }
-
 </style>
 </head>
 <body>
@@ -161,15 +146,11 @@
 <section id="about">
   <div class="container">
     <h1>Eve Adan</h1>
-    <div class="subtitle">Trilingual Entertainment Communications Strategist</div>
     <div class="divider"></div>
     <p>
-      I’m Eve — a trilingual media and communications professional with a passion for the entertainment industry.
-      I bring a multicultural perspective along with strong communication and organizational skills.
-      I’m eager to contribute creativity and strategic thinking to dynamic, culture-driven projects.
-    </p>
-    <p>
-      Public Relations • BTS Photography • Social Media
+      I’m Eve — a trilingual media and communications professional with a passion for the entertainment industry.  
+      Fluent in three languages with experience in film, fashion, media planning, buying, investment, and analysis.  
+      Skilled in managing campaigns and applying data-driven insights. Committed to collaboration, continuous learning, and delivering measurable results.
     </p>
   </div>
 </section>
@@ -181,12 +162,13 @@
     <div class="project">
       <p><strong>Diverse World Fashion Magazine</strong><br>
       Issue 26<br>
+      Roles: PUBLIC RELATIONS • BTS PHOTOGRAPHY • SOCIAL MEDIA<br>
       <a href="https://issuu.com/dwfmagazine/docs/eclectic_for_issuu-compressed-compressed" target="_blank">View Issue</a></p>
     </div>
 
     <div class="project">
       <p><strong>Clutch Magazine</strong><br>
-      Casting Agent & Fashion Stylist — Issue 33<br>
+      Casting Agent • Fashion Stylist — Issue 33<br>
       <a href="https://issuu.com/britt101/docs/compressedclutchuniversess23final" target="_blank">View Issue</a></p>
     </div>
 
@@ -200,17 +182,36 @@
     <div class="project">
       <p><strong>Florida Animation Festival</strong><br>
       Social Media Marketing Intern (2022)<br>
-      Instagram • Facebook • Website</p>
+      <a href="https://www.instagram.com/floridaanimationfestival/?hl=en" target="_blank">Instagram</a> • 
+      <a href="https://www.facebook.com/floridaanimationfestival/" target="_blank">Facebook</a> • 
+      <a href="https://tallahasseefilms.com/faf/" target="_blank">Website</a>
+      </p>
     </div>
 
     <div class="project">
       <p><strong>Girls Just Wanna Have Fundamental Rights</strong><br>
-      Social Media Fundraising Campaign for Women’s Rights (2022)</p>
+      Social Media Fundraising Campaign (2022)<br>
+      <a href="https://wakelet.com/wake/MCr-hB9Xlh9uqyFqJUcN8" target="_blank">Wakelet</a> • 
+      <a href="https://x.com/girlswantrights?s=21&t=KS1BFQe4l1_qylPtMPr25g" target="_blank">X/Twitter</a> • 
+      <a href="https://www.facebook.com/profile.php?id=100086919613379&mibextid=LQQJ4d" target="_blank">Facebook</a>
+      </p>
     </div>
 
     <div class="project">
       <p><strong>Plato’s Closet</strong><br>
-      Social Media Specialist (2023–2024)</p>
+      Social Media Specialist (2023–2024)<br>
+      <a href="https://www.instagram.com/platoscloset_tallahassee?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw%3D%3D" target="_blank">Instagram</a>
+      </p>
+    </div>
+
+    <div class="project">
+      <p><strong>Red Barn Publishing</strong><br>
+      Digital Marketing Intern (2025–2026)<br>
+      <a href="https://www.instagram.com/redbarnpublish/" target="_blank">Instagram</a> • 
+      <a href="https://www.facebook.com/people/Red-Barn-Publishing/61579396341481/?mibextid=wwXIfr&rdid=Dr3ZmW1hLrZsudnK&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F173ZCCLYwM%2F%3Fmibextid%3DwwXIfr" target="_blank">Facebook</a> • 
+      <a href="https://x.com/redbarnpublish" target="_blank">X/Twitter</a> • 
+      <a href="https://redbarnpublish.com/" target="_blank">Website</a>
+      </p>
     </div>
 
   </div>
@@ -247,13 +248,6 @@
     <div class="divider"></div>
 
     <p>
-      107 Eldridge Street APT 3B<br>
-      New York, NY 10002
-    </p>
-
-    <p>
-      (786) 329-9657<br>
-      <a href="mailto:eveadan17@gmail.com">eveadan17@gmail.com</a><br>
       <a href="https://www.linkedin.com/eveadan" target="_blank">LinkedIn</a>
     </p>
 
@@ -270,9 +264,7 @@
   const sections = document.querySelectorAll('section');
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
-      if(entry.isIntersecting){
-        entry.target.classList.add('visible');
-      }
+      if(entry.isIntersecting){ entry.target.classList.add('visible'); }
     });
   }, { threshold: 0.2 });
 
