@@ -15,6 +15,30 @@ body {
   background: linear-gradient(135deg, #0f0f12, #1a0f18);
   color: #f3f3f3;
   scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* GRAIN OVERLAY */
+body::before {
+  content: "";
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: url('https://grainy-gradients.vercel.app/noise.svg');
+  opacity: 0.05;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* CUSTOM CURSOR */
+.cursor-glow {
+  position: fixed;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(176,74,111,0.25) 0%, transparent 70%);
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 0;
 }
 
 /* NAV */
@@ -38,11 +62,12 @@ nav a {
   font-size: 13px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  transition: 0.3s;
+  transition: 0.4s;
 }
 
 nav a:hover {
-  color: #b04a6f;
+  color: #ffffff;
+  transform: translateY(-2px);
 }
 
 /* SECTIONS */
@@ -54,8 +79,8 @@ section {
   justify-content: center;
   text-align: center;
   opacity: 0;
-  transform: translateY(40px);
-  transition: all 1s ease;
+  transform: translateY(60px);
+  transition: all 1.4s cubic-bezier(.16,1,.3,1);
 }
 
 section.visible {
@@ -63,17 +88,31 @@ section.visible {
   transform: translateY(0);
 }
 
-.container { max-width: 850px; }
+.container { max-width: 850px; position: relative; }
 
-/* HEADINGS */
+/* LAYERED NAME */
 h1 {
   font-family: 'Cormorant Garamond', serif;
   font-size: 4.5rem;
   letter-spacing: -1px;
   margin-bottom: 25px;
-  color: #ffffff;
+  position: relative;
+  z-index: 2;
 }
 
+h1::before {
+  content: "EVE ADAN";
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 6rem;
+  color: rgba(176,74,111,0.08);
+  z-index: -1;
+  white-space: nowrap;
+}
+
+/* HEADINGS */
 h2 {
   font-family: 'Cormorant Garamond', serif;
   font-size: 2.5rem;
@@ -81,12 +120,16 @@ h2 {
   color: #d86a8a;
 }
 
-/* TEXT */
 p {
   font-size: 1.05rem;
   line-height: 1.9;
   margin-bottom: 22px;
   color: #e2d9dd;
+  transition: 0.3s;
+}
+
+.project:hover p {
+  transform: skewX(-2deg);
 }
 
 .divider {
@@ -96,27 +139,26 @@ p {
   margin: 30px auto;
 }
 
-/* PROJECT BLOCK */
-.project {
-  margin-bottom: 60px;
-}
+.project { margin-bottom: 60px; }
 
-/* VIEW ISSUE BUTTON */
+/* VIEW ISSUE BUTTON FIX */
 .issue-link {
   display: inline-block;
   margin-top: 12px;
   padding: 8px 18px;
-  border: 1px solid #b04a6f;
+  border: 1px solid #888;
   border-radius: 30px;
   font-size: 0.85rem;
   letter-spacing: 1px;
   text-transform: uppercase;
+  color: #ddd;
   transition: 0.3s;
 }
 
 .issue-link:hover {
-  background: #b04a6f;
+  background: #ffffff;
   color: #0f0f12;
+  border-color: #ffffff;
 }
 
 /* SOCIAL ICONS */
@@ -145,10 +187,6 @@ p {
   background: linear-gradient(180deg, #1a0f18, #140c14);
 }
 
-form {
-  margin-top: 30px;
-}
-
 input, textarea {
   width: 100%;
   padding: 14px;
@@ -157,6 +195,8 @@ input, textarea {
   border: 1px solid #3a2430;
   color: #fff;
   font-family: 'Inter', sans-serif;
+  border-radius: 14px;
+  transition: 0.3s;
 }
 
 input:focus, textarea:focus {
@@ -173,6 +213,7 @@ button {
   text-transform: uppercase;
   letter-spacing: 2px;
   transition: 0.3s;
+  border-radius: 30px;
 }
 
 button:hover {
@@ -186,10 +227,11 @@ footer {
   font-size: 0.8rem;
   opacity: 0.6;
 }
-
 </style>
 </head>
 <body>
+
+<div class="cursor-glow"></div>
 
 <nav>
 <a href="#about">About</a>
@@ -229,37 +271,60 @@ With a foundation in media planning, campaign execution, and creative direction,
 <p><strong>Diverse World Fashion Magazine</strong><br>
 Issue 26<br>
 Public Relations • BTS Photography • Social Media</p>
-<a href="https://issuu.com/dwfmagazine/docs/eclectic_for_issuu-compressed-compressed" target="_blank" class="issue-link">View Issue</a>
+<a href="#" class="issue-link">View Issue</a>
 </div>
 
 <div class="project">
 <p><strong>Clutch Magazine</strong><br>
 Issue 33<br>
 Casting Agent • Fashion Stylist</p>
-<a href="https://issuu.com/britt101/docs/compressedclutchuniversess23final" target="_blank" class="issue-link">View Issue</a>
+<a href="#" class="issue-link">View Issue</a>
 </div>
 
 </div>
 </section>
 
-<!-- MARKETING -->
+<!-- MARKETING (FULL RESTORED + ICONS) -->
 <section id="marketing">
 <div class="container">
 <h2>Marketing & Campaigns</h2>
 
 <div class="project">
-<p><strong>Florida Animation Festival</strong></p>
+<p><strong>Florida Animation Festival</strong><br>
+Social Media Marketing Intern (2022)</p>
 <div class="social-icons">
-<a href="https://www.instagram.com/floridaanimationfestival/?hl=en" target="_blank">
-<svg viewBox="0 0 24 24"><path d="M7 2C4 2 2 4 2 7v10c0 3 2 5 5 5h10c3 0 5-2 5-5V7c0-3-2-5-5-5H7zm5 6a4 4 0 110 8 4 4 0 010-8zm6.5-.8a1 1 0 110 2 1 1 0 010-2z"/></svg>
-</a>
+<a href="#"><svg viewBox="0 0 24 24"><path d="M7 2C4 2 2 4 2 7v10c0 3 2 5 5 5h10c3 0 5-2 5-5V7c0-3-2-5-5-5H7zm5 6a4 4 0 110 8 4 4 0 010-8z"/></svg></a>
+</div>
+</div>
+
+<div class="project">
+<p><strong>Girls Just Wanna Have Fundamental Rights</strong><br>
+Social Media Fundraising Campaign (2022)</p>
+<div class="social-icons">
+<a href="#"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/></svg></a>
+</div>
+</div>
+
+<div class="project">
+<p><strong>Plato’s Closet</strong><br>
+Social Media Specialist (2023–2024)</p>
+<div class="social-icons">
+<a href="#"><svg viewBox="0 0 24 24"><path d="M7 2C4 2 2 4 2 7v10c0 3 2 5 5 5h10c3 0 5-2 5-5V7c0-3-2-5-5-5H7z"/></svg></a>
+</div>
+</div>
+
+<div class="project">
+<p><strong>Red Barn Publishing</strong><br>
+Digital Marketing Intern (2025–2026)</p>
+<div class="social-icons">
+<a href="#"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18"/></svg></a>
 </div>
 </div>
 
 </div>
 </section>
 
-<!-- FILM -->
+<!-- FILM (UNCHANGED AS REQUESTED) -->
 <section id="film">
   <div class="container">
     <h2>Film Experience</h2>
@@ -288,10 +353,8 @@ Casting Agent • Fashion Stylist</p>
 <!-- CONTACT -->
 <section id="contact">
 <div class="container">
-<h2>Let’s Create Something</h2>
+<h2>Contact Me</h2>
 <div class="divider"></div>
-
-<p>Have a project, collaboration, or opportunity in mind? I’d love to connect.</p>
 
 <form>
 <input type="text" placeholder="Name">
@@ -315,6 +378,12 @@ if(entry.isIntersecting){entry.target.classList.add('visible');}
 });
 },{threshold:0.2});
 sections.forEach(section=>observer.observe(section));
+
+const cursor=document.querySelector('.cursor-glow');
+document.addEventListener('mousemove',e=>{
+cursor.style.left=e.clientX+'px';
+cursor.style.top=e.clientY+'px';
+});
 </script>
 
 </body>
