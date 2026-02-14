@@ -5,276 +5,47 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Eve Adan | Portfolio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
 * { margin:0; padding:0; box-sizing:border-box; }
 
 body {
   font-family: 'Inter', sans-serif;
-  background: radial-gradient(circle at top left, #1a1a1a, #0d0d0d 60%);
-  color: #f5f5f5;
+  background: linear-gradient(135deg, #0f0f12, #1a0f18);
+  color: #f3f3f3;
   scroll-behavior: smooth;
 }
 
+/* NAV */
 nav {
   position: fixed;
-  top: 0;
   width: 100%;
-  background: rgba(10,10,10,0.9);
+  top: 0;
+  background: rgba(15,15,18,0.85);
   backdrop-filter: blur(6px);
   display: flex;
   justify-content: center;
   padding: 18px 0;
-  border-bottom: 1px solid #222;
+  border-bottom: 1px solid #2a1c24;
   z-index: 1000;
 }
 
 nav a {
   margin: 0 25px;
   text-decoration: none;
-  color: #f5f5f5;
+  color: #e6d5dc;
   font-size: 13px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  transition: opacity 0.3s ease;
+  transition: 0.3s;
 }
 
-nav a:hover { opacity: 0.5; }
+nav a:hover {
+  color: #b04a6f;
+}
 
+/* SECTIONS */
 section {
   min-height: 100vh;
-  padding: 130px 10% 80px 10%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 1s ease;
-}
-
-section.visible { opacity:1; transform:translateY(0); }
-
-.container { max-width: 850px; }
-
-h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 4rem;
-  letter-spacing: -1px;
-  margin-bottom: 25px;
-}
-
-h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.3rem;
-  margin-bottom: 40px;
-}
-
-p {
-  font-size: 1.05rem;
-  line-height: 1.9;
-  margin-bottom: 22px;
-  color: #dcdcdc;
-}
-
-.divider {
-  width: 50px;
-  height: 1px;
-  background: #f5f5f5;
-  margin: 30px auto;
-}
-
-.project { margin-bottom: 55px; }
-
-a {
-  color: #f5f5f5;
-  text-decoration: none;
-  transition: opacity 0.3s ease;
-}
-
-a:hover { opacity: 0.5; }
-
-.social-icons a {
-  margin: 0 10px;
-  font-size: 18px;
-  border: 1px solid #444;
-  padding: 8px 10px;
-  border-radius: 50%;
-  display: inline-block;
-}
-
-.social-icons a:hover {
-  background:#f5f5f5;
-  color:#0d0d0d;
-}
-
-input, textarea {
-  width:100%;
-  padding:12px;
-  margin-bottom:15px;
-  background:#1a1a1a;
-  border:1px solid #333;
-  color:#fff;
-  font-family:'Inter', sans-serif;
-}
-
-button {
-  padding:12px 30px;
-  border:1px solid #f5f5f5;
-  background:none;
-  color:#f5f5f5;
-  cursor:pointer;
-  text-transform:uppercase;
-  letter-spacing:2px;
-}
-
-button:hover {
-  background:#f5f5f5;
-  color:#0d0d0d;
-}
-
-footer {
-  text-align:center;
-  padding:40px 0;
-  font-size:0.8rem;
-  opacity:0.6;
-}
-
-</style>
-</head>
-<body>
-
-<nav>
-<a href="#about">About</a>
-<a href="#editorial">Editorial</a>
-<a href="#marketing">Marketing</a>
-<a href="#film">Film</a>
-<a href="#contact">Contact</a>
-</nav>
-
-<section id="about">
-<div class="container">
-<h1>Eve Adan</h1>
-<div class="divider"></div>
-<p>
-Hi, I’m Eve. Fluent in three languages, I’ve built experience across publishing and media marketing, contributing to brands including Disney and LensCrafters.
-</p>
-<p>
-I’m passionate about film, fashion, and written storytelling — bringing a multicultural perspective, strategic thinking, and refined communication skills to every project.
-</p>
-<p>
-With a foundation in media planning, campaign execution, and creative direction, I’m committed to collaboration, continuous growth, and delivering work that resonates.
-</p>
-</div>
-</section>
-
-<section id="editorial">
-<div class="container">
-<h2>Editorial & PR</h2>
-
-<div class="project">
-<p><strong>Diverse World Fashion Magazine</strong><br>
-Issue 26<br>
-Public Relations • BTS Photography • Social Media<br>
-<a href="https://issuu.com/dwfmagazine/docs/eclectic_for_issuu-compressed-compressed" target="_blank">View Issue</a>
-</p>
-</div>
-
-<div class="project">
-<p><strong>Clutch Magazine</strong><br>
-Issue 33<br>
-Casting Agent • Fashion Stylist<br>
-<a href="https://issuu.com/britt101/docs/compressedclutchuniversess23final" target="_blank">View Issue</a>
-</p>
-</div>
-
-</div>
-</section>
-
-<section id="marketing">
-<div class="container">
-<h2>Marketing & Campaigns</h2>
-
-<div class="project">
-<p><strong>Florida Animation Festival</strong><br>
-Social Media Marketing Intern (2022)</p>
-<div class="social-icons">
-<a href="https://www.instagram.com/floridaanimationfestival/?hl=en" target="_blank">IG</a>
-<a href="https://www.facebook.com/floridaanimationfestival/" target="_blank">FB</a>
-<a href="https://tallahasseefilms.com/faf/" target="_blank">WEB</a>
-</div>
-</div>
-
-<div class="project">
-<p><strong>Girls Just Wanna Have Fundamental Rights</strong><br>
-Social Media Fundraising Campaign (2022)</p>
-<div class="social-icons">
-<a href="https://wakelet.com/wake/MCr-hB9Xlh9uqyFqJUcN8" target="_blank">WK</a>
-<a href="https://x.com/girlswantrights?s=21&t=KS1BFQe4l1_qylPtMPr25g" target="_blank">X</a>
-<a href="https://www.facebook.com/profile.php?id=100086919613379&mibextid=LQQJ4d" target="_blank">FB</a>
-</div>
-</div>
-
-<div class="project">
-<p><strong>Plato’s Closet</strong><br>
-Social Media Specialist (2023–2024)</p>
-<div class="social-icons">
-<a href="https://www.instagram.com/platoscloset_tallahassee?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw%3D%3D" target="_blank">IG</a>
-</div>
-</div>
-
-<div class="project">
-<p><strong>Red Barn Publishing</strong><br>
-Digital Marketing Intern (2025–2026)</p>
-<div class="social-icons">
-<a href="https://www.instagram.com/redbarnpublish/" target="_blank">IG</a>
-<a href="https://www.facebook.com/people/Red-Barn-Publishing/61579396341481/?mibextid=wwXIfr" target="_blank">FB</a>
-<a href="https://x.com/redbarnpublish" target="_blank">X</a>
-<a href="https://redbarnpublish.com/" target="_blank">WEB</a>
-</div>
-</div>
-
-</div>
-</section>
-
-<section id="film">
-<div class="container">
-<h2>Film Experience</h2>
-<p>Section unchanged.</p>
-</div>
-</section>
-
-<section id="contact">
-<div class="container">
-<h2>Contact Me Below</h2>
-<div class="divider"></div>
-
-<p><a href="https://www.linkedin.com/eveadan" target="_blank">LinkedIn</a></p>
-
-<form>
-<input type="text" placeholder="Your Name">
-<input type="email" placeholder="Your Email">
-<textarea rows="5" placeholder="Your Message"></textarea>
-<button type="submit">Send</button>
-</form>
-
-</div>
-</section>
-
-<footer>
-© 2026 Eve Adan
-</footer>
-
-<script>
-const sections=document.querySelectorAll('section');
-const observer=new IntersectionObserver(entries=>{
-entries.forEach(entry=>{
-if(entry.isIntersecting){entry.target.classList.add('visible');}
-});
-},{threshold:0.2});
-sections.forEach(section=>observer.observe(section));
-</script>
-
-</body>
-</html>
+  pad
