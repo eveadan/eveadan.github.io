@@ -8,224 +8,216 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
-* { margin:0; padding:0; box-sizing:border-box; }
+*{margin:0;padding:0;box-sizing:border-box}
 
-body {
-  font-family: 'Inter', sans-serif;
-  background: linear-gradient(135deg, #0f0f12, #1a0f18);
-  color: #f3f3f3;
-  scroll-behavior: smooth;
-  overflow-x: hidden;
+body{
+font-family:'Inter',sans-serif;
+background:linear-gradient(135deg,#0f0f12,#1a0f18);
+color:#f3f3f3;
+scroll-behavior:smooth;
+overflow-x:hidden;
 }
 
-/* GRAIN OVERLAY */
-body::before {
-  content: "";
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background: url('https://grainy-gradients.vercel.app/noise.svg');
-  opacity: 0.05;
-  pointer-events: none;
-  z-index: 9999;
+/* GRAIN */
+body::before{
+content:"";
+position:fixed;
+width:100%;
+height:100%;
+background:url('https://grainy-gradients.vercel.app/noise.svg');
+opacity:.05;
+pointer-events:none;
+z-index:9999;
 }
 
-/* CUSTOM CURSOR */
-.cursor-glow {
-  position: fixed;
-  width: 300px;
-  height: 300px;
-  background: radial-gradient(circle, rgba(176,74,111,0.25) 0%, transparent 70%);
-  pointer-events: none;
-  transform: translate(-50%, -50%);
-  z-index: 0;
+/* CURSOR GLOW */
+.cursor-glow{
+position:fixed;
+width:300px;
+height:300px;
+background:radial-gradient(circle,rgba(176,74,111,.25) 0%,transparent 70%);
+pointer-events:none;
+transform:translate(-50%,-50%);
+z-index:0;
 }
 
 /* NAV */
-nav {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  background: rgba(15,15,18,0.85);
-  backdrop-filter: blur(6px);
-  display: flex;
-  justify-content: center;
-  padding: 18px 0;
-  border-bottom: 1px solid #2a1c24;
-  z-index: 1000;
+nav{
+position:fixed;
+top:0;
+width:100%;
+background:rgba(15,15,18,.85);
+backdrop-filter:blur(6px);
+display:flex;
+justify-content:center;
+padding:18px 0;
+border-bottom:1px solid #2a1c24;
+z-index:1000;
 }
 
-nav a {
-  margin: 0 25px;
-  text-decoration: none;
-  color: #e6d5dc;
-  font-size: 13px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  transition: 0.4s;
+nav a{
+margin:0 25px;
+text-decoration:none;
+color:#e6d5dc;
+font-size:13px;
+letter-spacing:2px;
+text-transform:uppercase;
+transition:.3s;
 }
 
-nav a:hover {
-  color: #ffffff;
-  transform: translateY(-2px);
+nav a:hover{
+color:#fff;
+transform:translateY(-2px);
 }
 
 /* SECTIONS */
-section {
-  min-height: 100vh;
-  padding: 130px 10% 80px 10%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  opacity: 0;
-  transform: translateY(60px);
-  transition: all 1.4s cubic-bezier(.16,1,.3,1);
+section{
+min-height:100vh;
+padding:130px 10% 80px;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+opacity:0;
+transform:translateY(60px);
+transition:all 1.4s cubic-bezier(.16,1,.3,1);
 }
 
-section.visible {
-  opacity: 1;
-  transform: translateY(0);
+section.visible{
+opacity:1;
+transform:translateY(0);
 }
 
-.container { max-width: 850px; position: relative; }
+.container{max-width:900px;position:relative}
 
-/* LAYERED NAME */
-h1 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 4.5rem;
-  letter-spacing: -1px;
-  margin-bottom: 25px;
-  position: relative;
-  z-index: 2;
+/* NAME */
+h1{
+font-family:'Cormorant Garamond',serif;
+font-size:4.5rem;
+margin-bottom:25px;
+position:relative;
+z-index:2;
 }
 
-h1::before {
-  content: "EVE ADAN";
-  position: absolute;
-  top: 15px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 6rem;
-  color: rgba(176,74,111,0.08);
-  z-index: -1;
-  white-space: nowrap;
+h1::before{
+content:"EVE ADAN";
+position:absolute;
+top:15px;
+left:50%;
+transform:translateX(-50%);
+font-size:6rem;
+color:rgba(176,74,111,.08);
+z-index:-1;
+white-space:nowrap;
 }
 
-/* HEADINGS */
-h2 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 2.5rem;
-  margin-bottom: 40px;
-  color: #d86a8a;
+h2{
+font-family:'Cormorant Garamond',serif;
+font-size:2.5rem;
+margin-bottom:40px;
+color:#d86a8a;
 }
 
-p {
-  font-size: 1.05rem;
-  line-height: 1.9;
-  margin-bottom: 22px;
-  color: #e2d9dd;
-  transition: 0.3s;
+p{
+font-size:1.05rem;
+line-height:1.9;
+margin-bottom:22px;
+color:#e2d9dd;
 }
 
-.project:hover p {
-  transform: skewX(-2deg);
+.divider{
+width:60px;
+height:2px;
+background:#b04a6f;
+margin:30px auto;
 }
 
-.divider {
-  width: 60px;
-  height: 2px;
-  background: #b04a6f;
-  margin: 30px auto;
+.project{margin-bottom:60px}
+
+/* ISSUE BUTTON */
+.issue-link{
+display:inline-block;
+margin-top:12px;
+padding:8px 18px;
+border:1px solid #b04a6f;
+border-radius:30px;
+font-size:.85rem;
+letter-spacing:1px;
+text-transform:uppercase;
+color:#b04a6f;
+transition:.3s;
 }
 
-.project { margin-bottom: 60px; }
-
-/* VIEW ISSUE BUTTON FIX */
-.issue-link {
-  display: inline-block;
-  margin-top: 12px;
-  padding: 8px 18px;
-  border: 1px solid #888;
-  border-radius: 30px;
-  font-size: 0.85rem;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: #ddd;
-  transition: 0.3s;
+.issue-link:hover{
+background:#b04a6f;
+color:#0f0f12;
 }
 
-.issue-link:hover {
-  background: #ffffff;
-  color: #0f0f12;
-  border-color: #ffffff;
+/* ICONS */
+.social-icons{
+margin-top:15px;
 }
 
-/* SOCIAL ICONS */
-.social-icons {
-  margin-top: 15px;
+.social-icons a{
+margin:0 10px;
+display:inline-block;
+transition:.3s;
 }
 
-.social-icons a {
-  margin: 0 10px;
-  display: inline-block;
-  transition: 0.3s;
+.social-icons svg{
+width:22px;
+height:22px;
+fill:#e6d5dc;
 }
 
-.social-icons svg {
-  width: 22px;
-  height: 22px;
-  fill: #e6d5dc;
-}
-
-.social-icons a:hover svg {
-  fill: #b04a6f;
+.social-icons a:hover svg{
+fill:#b04a6f;
 }
 
 /* CONTACT */
-#contact {
-  background: linear-gradient(180deg, #1a0f18, #140c14);
+#contact{
+background:linear-gradient(180deg,#1a0f18,#140c14);
 }
 
-input, textarea {
-  width: 100%;
-  padding: 14px;
-  margin-bottom: 18px;
-  background: #181018;
-  border: 1px solid #3a2430;
-  color: #fff;
-  font-family: 'Inter', sans-serif;
-  border-radius: 14px;
-  transition: 0.3s;
+input,textarea{
+width:100%;
+padding:14px;
+margin-bottom:18px;
+background:#181018;
+border:1px solid #3a2430;
+color:#fff;
+font-family:'Inter',sans-serif;
+border-radius:16px;
+transition:.3s;
 }
 
-input:focus, textarea:focus {
-  outline: none;
-  border-color: #b04a6f;
+input:focus,textarea:focus{
+outline:none;
+border-color:#b04a6f;
 }
 
-button {
-  padding: 12px 30px;
-  border: 1px solid #b04a6f;
-  background: none;
-  color: #b04a6f;
-  cursor: pointer;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  transition: 0.3s;
-  border-radius: 30px;
+button{
+padding:12px 30px;
+border:1px solid #b04a6f;
+background:none;
+color:#b04a6f;
+cursor:pointer;
+text-transform:uppercase;
+letter-spacing:2px;
+border-radius:30px;
+transition:.3s;
 }
 
-button:hover {
-  background: #b04a6f;
-  color: #0f0f12;
+button:hover{
+background:#b04a6f;
+color:#0f0f12;
 }
 
-footer {
-  text-align: center;
-  padding: 40px 0;
-  font-size: 0.8rem;
-  opacity: 0.6;
+footer{
+text-align:center;
+padding:40px 0;
+font-size:.8rem;
+opacity:.6;
 }
 </style>
 </head>
@@ -271,29 +263,38 @@ With a foundation in media planning, campaign execution, and creative direction,
 <p><strong>Diverse World Fashion Magazine</strong><br>
 Issue 26<br>
 Public Relations • BTS Photography • Social Media</p>
-<a href="#" class="issue-link">View Issue</a>
+<a href="https://issuu.com/dwfmagazine/docs/eclectic_for_issuu-compressed-compressed" target="_blank" class="issue-link">View Issue</a>
 </div>
 
 <div class="project">
 <p><strong>Clutch Magazine</strong><br>
 Issue 33<br>
 Casting Agent • Fashion Stylist</p>
-<a href="#" class="issue-link">View Issue</a>
+<a href="https://issuu.com/britt101/docs/compressedclutchuniversess23final" target="_blank" class="issue-link">View Issue</a>
 </div>
 
 </div>
 </section>
 
-<!-- MARKETING (FULL RESTORED + ICONS) -->
+<!-- MARKETING -->
 <section id="marketing">
 <div class="container">
 <h2>Marketing & Campaigns</h2>
 
 <div class="project">
+<p><strong>Publicis Groupe</strong><br>
+Media Associate for Disney (2024–2025)<br>
+Senior Media Associate for LensCrafters (2025–Present)</p>
+</div>
+
+<div class="project">
 <p><strong>Florida Animation Festival</strong><br>
 Social Media Marketing Intern (2022)</p>
 <div class="social-icons">
-<a href="#"><svg viewBox="0 0 24 24"><path d="M7 2C4 2 2 4 2 7v10c0 3 2 5 5 5h10c3 0 5-2 5-5V7c0-3-2-5-5-5H7zm5 6a4 4 0 110 8 4 4 0 010-8z"/></svg></a>
+<a href="https://tallahasseefilms.com/faf/" target="_blank" title="Website">🌐</a>
+<a href="https://www.instagram.com/floridaanimationfestival/?hl=en" target="_blank" title="Instagram">
+<svg viewBox="0 0 24 24"><path d="M7 2C4 2 2 4 2 7v10c0 3 2 5 5 5h10c3 0 5-2 5-5V7c0-3-2-5-5-5H7zm5 6a4 4 0 110 8 4 4 0 010-8z"/></svg></a>
+<a href="https://www.facebook.com/floridaanimationfestival/" target="_blank" title="Facebook">f</a>
 </div>
 </div>
 
@@ -301,7 +302,9 @@ Social Media Marketing Intern (2022)</p>
 <p><strong>Girls Just Wanna Have Fundamental Rights</strong><br>
 Social Media Fundraising Campaign (2022)</p>
 <div class="social-icons">
-<a href="#"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/></svg></a>
+<a href="https://wakelet.com/wake/MCr-hB9Xlh9uqyFqJUcN8" target="_blank" title="Website">🌐</a>
+<a href="https://www.facebook.com/profile.php?id=100086919613379&mibextid=LQQJ4d" target="_blank" title="Facebook">f</a>
+<a href="https://x.com/girlswantrights?s=21&t=KS1BFQe4l1_qylPtMPr25g" target="_blank" title="X">X</a>
 </div>
 </div>
 
@@ -309,7 +312,8 @@ Social Media Fundraising Campaign (2022)</p>
 <p><strong>Plato’s Closet</strong><br>
 Social Media Specialist (2023–2024)</p>
 <div class="social-icons">
-<a href="#"><svg viewBox="0 0 24 24"><path d="M7 2C4 2 2 4 2 7v10c0 3 2 5 5 5h10c3 0 5-2 5-5V7c0-3-2-5-5-5H7z"/></svg></a>
+<a href="https://www.instagram.com/platoscloset_tallahassee?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw%3D%3D" target="_blank" title="Instagram">
+<svg viewBox="0 0 24 24"><path d="M7 2C4 2 2 4 2 7v10c0 3 2 5 5 5h10c3 0 5-2 5-5V7c0-3-2-5-5-5H7zm5 6a4 4 0 110 8 4 4 0 010-8z"/></svg></a>
 </div>
 </div>
 
@@ -317,58 +321,16 @@ Social Media Specialist (2023–2024)</p>
 <p><strong>Red Barn Publishing</strong><br>
 Digital Marketing Intern (2025–2026)</p>
 <div class="social-icons">
-<a href="#"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18"/></svg></a>
+<a href="https://redbarnpublish.com/" target="_blank">🌐</a>
+<a href="https://www.instagram.com/RedBarnPublish/" target="_blank">
+<svg viewBox="0 0 24 24"><path d="M7 2C4 2 2 4 2 7v10c0 3 2 5 5 5h10c3 0 5-2 5-5V7c0-3-2-5-5-5H7zm5 6a4 4 0 110 8 4 4 0 010-8z"/></svg></a>
+<a href="https://x.com/redbarnpublish" target="_blank">X</a>
+<a href="https://www.facebook.com/profile.php?id=61579396341481&mibextid=wwXIfr&rdid=Dr3ZmW1hLrZsudnK&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F173ZCCLYwM%2F%3Fmibextid%3DwwXIfr#" target="_blank">f</a>
 </div>
 </div>
 
 </div>
 </section>
-
-<!-- FILM (UNCHANGED AS REQUESTED) -->
-<section id="film">
-  <div class="container">
-    <h2>Film Experience</h2>
-
-    <div class="project">
-      <p><strong>This Isn’t a Coincidence</strong> (2021)<br>
-      Production Assistant — FSU College of Motion Picture Arts<br>
-      Short Film by David Luna</p>
-    </div>
-
-    <div class="project">
-      <p><strong>Acidic</strong> (2021)<br>
-      Production Assistant — FSU College of Motion Picture Arts<br>
-      Short Film by Julia Safrin</p>
-    </div>
-
-    <div class="project">
-      <p><strong>The Coffee Shop</strong> (2021)<br>
-      Production Assistant & Extra — FSU College of Motion Picture Arts<br>
-      Short Film by Katie Lim</p>
-    </div>
-
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact">
-<div class="container">
-<h2>Contact Me</h2>
-<div class="divider"></div>
-
-<form>
-<input type="text" placeholder="Name">
-<input type="email" placeholder="Email">
-<textarea rows="5" placeholder="Message"></textarea>
-<button type="submit">Send Message</button>
-</form>
-
-</div>
-</section>
-
-<footer>
-© 2026 Eve Adan
-</footer>
 
 <script>
 const sections=document.querySelectorAll('section');
@@ -376,7 +338,7 @@ const observer=new IntersectionObserver(entries=>{
 entries.forEach(entry=>{
 if(entry.isIntersecting){entry.target.classList.add('visible');}
 });
-},{threshold:0.2});
+},{threshold:.2});
 sections.forEach(section=>observer.observe(section));
 
 const cursor=document.querySelector('.cursor-glow');
