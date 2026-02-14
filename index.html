@@ -48,4 +48,274 @@ nav a:hover {
 /* SECTIONS */
 section {
   min-height: 100vh;
-  pad
+  padding: 130px 10% 80px 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s ease;
+}
+
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.container { max-width: 850px; }
+
+/* HEADINGS */
+h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 4.5rem;
+  letter-spacing: -1px;
+  margin-bottom: 25px;
+  color: #ffffff;
+}
+
+h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #d86a8a;
+}
+
+/* TEXT */
+p {
+  font-size: 1.05rem;
+  line-height: 1.9;
+  margin-bottom: 22px;
+  color: #e2d9dd;
+}
+
+.divider {
+  width: 60px;
+  height: 2px;
+  background: #b04a6f;
+  margin: 30px auto;
+}
+
+/* PROJECT BLOCK */
+.project {
+  margin-bottom: 60px;
+}
+
+/* VIEW ISSUE BUTTON */
+.issue-link {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 8px 18px;
+  border: 1px solid #b04a6f;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+
+.issue-link:hover {
+  background: #b04a6f;
+  color: #0f0f12;
+}
+
+/* SOCIAL ICONS */
+.social-icons {
+  margin-top: 15px;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.social-icons svg {
+  width: 22px;
+  height: 22px;
+  fill: #e6d5dc;
+}
+
+.social-icons a:hover svg {
+  fill: #b04a6f;
+}
+
+/* CONTACT */
+#contact {
+  background: linear-gradient(180deg, #1a0f18, #140c14);
+}
+
+form {
+  margin-top: 30px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 18px;
+  background: #181018;
+  border: 1px solid #3a2430;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #b04a6f;
+}
+
+button {
+  padding: 12px 30px;
+  border: 1px solid #b04a6f;
+  background: none;
+  color: #b04a6f;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #b04a6f;
+  color: #0f0f12;
+}
+
+footer {
+  text-align: center;
+  padding: 40px 0;
+  font-size: 0.8rem;
+  opacity: 0.6;
+}
+
+</style>
+</head>
+<body>
+
+<nav>
+<a href="#about">About</a>
+<a href="#editorial">Editorial</a>
+<a href="#marketing">Marketing</a>
+<a href="#film">Film</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<!-- ABOUT -->
+<section id="about">
+<div class="container">
+<h1>Eve Adan</h1>
+<div class="divider"></div>
+
+<p>
+Hi, I’m Eve! I'm fluent in three languages and I’ve built experience across publishing and media marketing by contributing to brands including Disney and LensCrafters.
+</p>
+
+<p>
+I’m passionate about film, fashion, and written storytelling — bringing a multicultural perspective, strategic thinking, and refined communication skills to every project.
+</p>
+
+<p>
+With a foundation in media planning, campaign execution, and creative direction, I’m committed to collaboration, continuous growth, and delivering work that resonates &lt;3
+</p>
+
+</div>
+</section>
+
+<!-- EDITORIAL -->
+<section id="editorial">
+<div class="container">
+<h2>Editorial & PR</h2>
+
+<div class="project">
+<p><strong>Diverse World Fashion Magazine</strong><br>
+Issue 26<br>
+Public Relations • BTS Photography • Social Media</p>
+<a href="https://issuu.com/dwfmagazine/docs/eclectic_for_issuu-compressed-compressed" target="_blank" class="issue-link">View Issue</a>
+</div>
+
+<div class="project">
+<p><strong>Clutch Magazine</strong><br>
+Issue 33<br>
+Casting Agent • Fashion Stylist</p>
+<a href="https://issuu.com/britt101/docs/compressedclutchuniversess23final" target="_blank" class="issue-link">View Issue</a>
+</div>
+
+</div>
+</section>
+
+<!-- MARKETING -->
+<section id="marketing">
+<div class="container">
+<h2>Marketing & Campaigns</h2>
+
+<div class="project">
+<p><strong>Florida Animation Festival</strong></p>
+<div class="social-icons">
+<a href="https://www.instagram.com/floridaanimationfestival/?hl=en" target="_blank">
+<svg viewBox="0 0 24 24"><path d="M7 2C4 2 2 4 2 7v10c0 3 2 5 5 5h10c3 0 5-2 5-5V7c0-3-2-5-5-5H7zm5 6a4 4 0 110 8 4 4 0 010-8zm6.5-.8a1 1 0 110 2 1 1 0 010-2z"/></svg>
+</a>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- FILM -->
+<section id="film">
+  <div class="container">
+    <h2>Film Experience</h2>
+
+    <div class="project">
+      <p><strong>This Isn’t a Coincidence</strong> (2021)<br>
+      Production Assistant — FSU College of Motion Picture Arts<br>
+      Short Film by David Luna</p>
+    </div>
+
+    <div class="project">
+      <p><strong>Acidic</strong> (2021)<br>
+      Production Assistant — FSU College of Motion Picture Arts<br>
+      Short Film by Julia Safrin</p>
+    </div>
+
+    <div class="project">
+      <p><strong>The Coffee Shop</strong> (2021)<br>
+      Production Assistant & Extra — FSU College of Motion Picture Arts<br>
+      Short Film by Katie Lim</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+<div class="container">
+<h2>Let’s Create Something</h2>
+<div class="divider"></div>
+
+<p>Have a project, collaboration, or opportunity in mind? I’d love to connect.</p>
+
+<form>
+<input type="text" placeholder="Name">
+<input type="email" placeholder="Email">
+<textarea rows="5" placeholder="Message"></textarea>
+<button type="submit">Send Message</button>
+</form>
+
+</div>
+</section>
+
+<footer>
+© 2026 Eve Adan
+</footer>
+
+<script>
+const sections=document.querySelectorAll('section');
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){entry.target.classList.add('visible');}
+});
+},{threshold:0.2});
+sections.forEach(section=>observer.observe(section));
+</script>
+
+</body>
+</html>
