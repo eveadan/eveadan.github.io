@@ -50,13 +50,28 @@ background:rgba(15,15,18,.85);
 backdrop-filter:blur(6px);
 display:flex;
 justify-content:center;
+align-items:center;
 padding:18px 0;
 border-bottom:1px solid #2a1c24;
 z-index:1000;
+flex-wrap:wrap;
+}
+
+.logo{
+width:55px;
+height:55px;
+border-radius:50%;
+object-fit:cover;
+margin-right:30px;
+transition:.3s;
+}
+
+.logo:hover{
+transform:scale(1.05);
 }
 
 nav a{
-margin:0 25px;
+margin:0 20px;
 text-decoration:none;
 color:#e6d5dc;
 font-size:13px;
@@ -73,7 +88,7 @@ transform:translateY(-2px);
 /* SECTIONS */
 section{
 min-height:100vh;
-padding:130px 10% 80px;
+padding:150px 10% 80px;
 display:flex;
 align-items:center;
 justify-content:center;
@@ -226,6 +241,9 @@ opacity:.6;
 <div class="cursor-glow"></div>
 
 <nav>
+<a href="#about">
+<img src="logo.png" alt="Eve Adan Logo" class="logo">
+</a>
 <a href="#about">About</a>
 <a href="#editorial">Editorial</a>
 <a href="#marketing">Marketing</a>
@@ -318,7 +336,7 @@ Digital Marketing Intern (2025–2026)</p>
 </div>
 </div>
 
-  <div class="project">
+<div class="project">
 <p><strong>Publicis Groupe</strong><br>
 Media Associate for Disney (2024–2025)<br>
 Senior Media Associate for LensCrafters (2025–Present)</p>
