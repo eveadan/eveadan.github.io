@@ -439,15 +439,45 @@ opacity:.6;
 
 
 <section id="contact">
-<div class="container">
-<h2>Contact</h2>
+  <div class="container">
+    <h2>Contact</h2>
 
-<form>
-<input type="text" placeholder="Your Name">
-<input type="email" placeholder="Your Email">
-<textarea rows="5" placeholder="Your Message"></textarea>
-<button type="submit">Send Message</button>
-</form>
+    <form action="https://formspree.io/f/xpqjrlod" method="POST">
+      <!-- LinkedIn button -->
+      <a href="https://www.linkedin.com/in/eveadan" target="_blank" class="contact-button">LinkedIn</a>
+
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+  </div>
+</section>
+
+<style>
+/* LinkedIn button styled like Send Message button */
+.contact-button {
+  display: inline-block;
+  padding: 12px 30px;
+  border: 1px solid #b04a6f;
+  background: none;
+  color: #b04a6f;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 30px;
+  transition: .3s;
+  margin-bottom: 18px;
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+}
+
+.contact-button:hover {
+  background: #b04a6f;
+  color: #0f0f12;
+}
+</style>
 
 </div>
 </section>
