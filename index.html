@@ -437,12 +437,11 @@ opacity:.6;
   </div>
 </section>
 
-
 <section id="contact">
   <div class="container">
     <h2>Contact</h2>
 
-    <form action="https://formspree.io/f/xpqjrlod" method="POST">
+    <form id="contactForm" action="https://formspree.io/f/xpqjrlod" method="POST">
       <!-- LinkedIn button -->
       <a href="https://www.linkedin.com/in/eveadan" target="_blank" class="contact-button">LinkedIn</a>
 
@@ -452,6 +451,10 @@ opacity:.6;
       <button type="submit">Send Message</button>
     </form>
 
+    <!-- Confirmation message -->
+    <p id="formSuccess" style="display:none; margin-top:18px; color:#b04a6f; font-weight:600;">
+      Thanks! Your message has been sent.
+    </p>
   </div>
 </section>
 
@@ -478,6 +481,30 @@ opacity:.6;
   color: #0f0f12;
 }
 </style>
+
+<script>
+// Show thank-you message on submit
+const form = document.getElementById('contactForm');
+const successMessage = document.getElementById('formSuccess');
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+
+  const formData = new FormData(form);
+  const response = await fetch(form.action, {
+    method: form.method,
+    body: formData,
+    headers: { 'Accept': 'application/json' }
+  });
+
+  if (response.ok) {
+    successMessage.style.display = 'block';
+    form.reset();
+  } else {
+    alert('Oops! There was a problem submitting your form.');
+  }
+});
+</script>
 
 </div>
 </section>
