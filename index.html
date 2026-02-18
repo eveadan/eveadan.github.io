@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Eve Adan | Portfolio</title>
 
-<!-- Favicon -->
 <link rel="icon" type="image/png" href="favicon-circle.png">
 
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
@@ -13,63 +12,75 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 
+/* ================= BODY ================= */
+
 body{
   font-family:'Inter',sans-serif;
-  background:linear-gradient(135deg,#0f0f12,#1a0f18);
-  color:#f3f3f3;
+  background:#0a0a0a;
+  color:#f5f5f5;
   scroll-behavior:smooth;
   overflow-x:hidden;
+  position:relative;
 }
 
+/* Blurred glow background */
 body::before{
+  content:"";
+  position:fixed;
+  width:120%;
+  height:120%;
+  top:-10%;
+  left:-10%;
+  background:
+    radial-gradient(circle at 30% 40%, rgba(255,255,255,0.06), transparent 60%),
+    radial-gradient(circle at 70% 70%, rgba(255,255,255,0.04), transparent 60%);
+  filter:blur(90px);
+  z-index:-2;
+}
+
+/* Film grain */
+body::after{
   content:"";
   position:fixed;
   width:100%;
   height:100%;
   background:url('https://grainy-gradients.vercel.app/noise.svg');
-  opacity:.05;
+  opacity:.07;
   pointer-events:none;
   z-index:9999;
 }
 
-.cursor-glow{
-  position:fixed;
-  width:300px;
-  height:300px;
-  background:radial-gradient(circle,rgba(176,74,111,.25) 0%,transparent 70%);
-  pointer-events:none;
-  transform:translate(-50%,-50%);
-  z-index:0;
-}
+/* ================= NAV ================= */
 
 nav{
   position:fixed;
   top:0;
   width:100%;
-  background:rgba(15,15,18,.85);
-  backdrop-filter:blur(6px);
+  background:rgba(0,0,0,.6);
+  backdrop-filter:blur(12px);
   display:flex;
   justify-content:center;
   flex-wrap:wrap;
-  padding:12px 0;
-  border-bottom:1px solid #2a1c24;
+  padding:14px 0;
+  border-bottom:1px solid rgba(255,255,255,0.08);
   z-index:1000;
 }
 
 nav a{
-  margin:8px 15px;
+  margin:8px 18px;
   text-decoration:none;
-  color:#e6d5dc;
-  font-size:13px;
-  letter-spacing:2px;
+  color:#dcdcdc;
+  font-size:12px;
+  letter-spacing:3px;
   text-transform:uppercase;
   transition:.3s;
 }
 
 nav a:hover{
-  color:#fff;
-  transform:translateY(-2px);
+  color:#ffffff;
 }
+
+/* ================= SECTIONS ================= */
 
 section{
   min-height:100vh;
@@ -90,22 +101,27 @@ section.visible{
 
 .container{max-width:900px;position:relative}
 
+/* ================= HEADINGS ================= */
+
 h1{
   font-family:'Cormorant Garamond',serif;
   font-size:4.5rem;
   margin-bottom:25px;
+  letter-spacing:1px;
+  color:#ffffff;
   position:relative;
-  z-index:2;
+  text-shadow:0 0 20px rgba(255,255,255,0.1);
 }
 
 h1::before{
   content:"EVE ADAN";
+  letter-spacing:8px;
   position:absolute;
   top:15px;
   left:50%;
   transform:translateX(-50%);
   font-size:6rem;
-  color:rgba(176,74,111,.08);
+  color:rgba(255,255,255,.04);
   z-index:-1;
   white-space:nowrap;
 }
@@ -114,45 +130,61 @@ h2{
   font-family:'Cormorant Garamond',serif;
   font-size:2.5rem;
   margin-bottom:40px;
-  color:#d86a8a;
+  color:#ffffff;
+  letter-spacing:1px;
 }
+
+/* ================= TEXT ================= */
 
 p{
   font-size:1.05rem;
   line-height:1.9;
   margin-bottom:22px;
-  color:#e2d9dd;
+  color:#eaeaea;
 }
 
 .divider{
   width:60px;
-  height:2px;
-  background:#b04a6f;
+  height:1px;
+  background:rgba(255,255,255,0.2);
   margin:30px auto;
 }
+
+/* ================= PROJECTS ================= */
 
 .project{
   margin-bottom:60px;
   text-align:center;
 }
 
-.issue-link{
+/* ================= BUTTONS ================= */
+
+.issue-link,
+button,
+.contact-button{
   display:inline-block;
   margin-top:12px;
-  padding:8px 18px;
-  border:1px solid #b04a6f;
-  border-radius:30px;
-  font-size:.85rem;
-  letter-spacing:1px;
+  padding:10px 26px;
+  border:1px solid rgba(255,255,255,0.3);
+  border-radius:40px;
+  font-size:.8rem;
+  letter-spacing:2px;
   text-transform:uppercase;
-  color:#b04a6f;
-  transition:.3s;
+  color:#ffffff;
+  background:transparent;
+  transition:.4s ease;
+  text-decoration:none;
+  cursor:pointer;
 }
 
-.issue-link:hover{
-  background:#b04a6f;
-  color:#0f0f12;
+.issue-link:hover,
+button:hover,
+.contact-button:hover{
+  background:#ffffff;
+  color:#0a0a0a;
 }
+
+/* ================= SOCIAL ICONS ================= */
 
 .social-icons{
   margin-top:18px;
@@ -165,7 +197,7 @@ p{
   justify-content:center;
   width:40px;
   height:40px;
-  border:1px solid #3a2430;
+  border:1px solid rgba(255,255,255,0.2);
   border-radius:50%;
   transition:.3s;
 }
@@ -173,28 +205,30 @@ p{
 .social-icons svg{
   width:18px;
   height:18px;
-  fill:#e6d5dc;
+  fill:#eaeaea;
   transition:.3s;
 }
 
 .social-icons a:hover{
-  border-color:#b04a6f;
+  border-color:#ffffff;
 }
 
 .social-icons a:hover svg{
-  fill:#b04a6f;
+  fill:#ffffff;
 }
 
+/* ================= CONTACT ================= */
+
 #contact{
-  background:linear-gradient(180deg,#1a0f18,#140c14);
+  background:rgba(255,255,255,0.02);
 }
 
 input,textarea{
   width:100%;
   padding:14px;
   margin-bottom:18px;
-  background:#181018;
-  border:1px solid #3a2430;
+  background:#111;
+  border:1px solid rgba(255,255,255,0.15);
   color:#fff;
   font-family:'Inter',sans-serif;
   border-radius:16px;
@@ -203,141 +237,39 @@ input,textarea{
 
 input:focus,textarea:focus{
   outline:none;
-  border-color:#b04a6f;
+  border-color:#ffffff;
 }
 
-button{
-  padding:12px 30px;
-  border:1px solid #b04a6f;
-  background:none;
-  color:#b04a6f;
-  cursor:pointer;
-  text-transform:uppercase;
-  letter-spacing:2px;
-  border-radius:30px;
-  transition:.3s;
-}
-
-button:hover{
-  background:#b04a6f;
-  color:#0f0f12;
-}
+/* ================= FOOTER ================= */
 
 footer{
   text-align:center;
   padding:40px 0;
   font-size:.8rem;
-  opacity:.6;
+  opacity:.5;
 }
 
-/* LinkedIn button styled like Send Message button */
-.contact-button {
-  display: inline-block;
-  padding: 12px 30px;
-  border: 1px solid #b04a6f;
-  background: none;
-  color: #b04a6f;
-  cursor: pointer;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  border-radius: 30px;
-  transition: .3s;
-  margin-bottom: 18px;
-  text-decoration: none;
-  font-family: 'Inter', sans-serif;
+/* ================= MOBILE ================= */
+
+@media (max-width:768px){
+
+  h1{font-size:3rem}
+  h1::before{font-size:4rem}
+  h2{font-size:2rem}
+  p{font-size:0.95rem}
+  section{padding:120px 6% 60px}
 }
 
-.contact-button:hover {
-  background: #b04a6f;
-  color: #0f0f12;
-}
+@media (max-width:480px){
 
-/* MOBILE RESPONSIVE */
-@media (max-width: 768px) {
-  nav a {
-    margin: 6px 10px;
-    font-size: 12px;
-  }
-
-  h1 {
-    font-size: 3rem;
-  }
-
-  h1::before {
-    font-size: 4rem;
-  }
-
-  h2 {
-    font-size: 2rem;
-    margin-bottom:30px;
-  }
-
-  p {
-    font-size: 0.95rem;
-    line-height:1.6;
-  }
-
-  .container {
-    padding: 0 5%;
-  }
-
-  section {
-    padding: 120px 5% 60px;
-  }
-
-  .issue-link {
-    font-size: 0.75rem;
-    padding:6px 14px;
-  }
-
-  .social-icons a {
-    width:35px;
-    height:35px;
-    margin:0 6px;
-  }
-
-  .social-icons svg {
-    width:16px;
-    height:16px;
-  }
-
-  input, textarea {
-    padding:12px;
-  }
-
-  button, .contact-button {
-    padding:10px 20px;
-    font-size:0.85rem;
-  }
-}
-
-@media (max-width: 480px) {
-  h1 {
-    font-size:2.2rem;
-  }
-
-  h1::before {
-    font-size:3rem;
-  }
-
-  h2 {
-    font-size:1.6rem;
-  }
-
-  nav a {
-    font-size:11px;
-    margin:4px 6px;
-  }
-
-  .project {
-    margin-bottom:40px;
-  }
+  h1{font-size:2.2rem}
+  h1::before{font-size:3rem}
+  h2{font-size:1.6rem}
 }
 </style>
 </head>
-<body>
 
-<div class="cursor-glow"></div>
+<body>
 
 <nav>
   <a href="#about">About</a>
@@ -535,7 +467,7 @@ footer{
     <!-- LinkedIn button -->
     <div style="text-align:center; margin-bottom:24px;">
       <a href="https://www.linkedin.com/in/eveadan" target="_blank" class="contact-button">LinkedIn</a>
-      <div style="font-size:0.85rem; color:#e2d9dd; margin-top:6px;">Message Me</div>
+      <div style="font-size:0.85rem; color:#cccccc; margin-top:6px;">Message Me</div>
     </div>
 
     <!-- Contact form -->
@@ -547,7 +479,8 @@ footer{
     </form>
 
     <!-- Confirmation message -->
-    <p id="formSuccess" style="display:none; margin-top:18px; color:#b04a6f; font-weight:600;">
+    <p id="formSuccess" style="display:none; margin-top:18px; color:#ffffff; font-weight:600;">
+
       Thanks! Your message has been sent.
     </p>
   </div>
@@ -556,24 +489,24 @@ footer{
 <style>
 /* LinkedIn button styled like Send Message button */
 .contact-button {
-  display: inline-block;
-  padding: 12px 30px;
-  border: 1px solid #b04a6f;
-  background: none;
-  color: #b04a6f;
-  cursor: pointer;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  border-radius: 30px;
-  transition: .3s;
-  margin-bottom: 18px;
-  text-decoration: none;
-  font-family: 'Inter', sans-serif;
+  display:inline-block;
+  padding:12px 30px;
+  border:1px solid rgba(255,255,255,0.3);
+  background:none;
+  color:#ffffff;
+  cursor:pointer;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  border-radius:30px;
+  transition:.4s;
+  margin-bottom:18px;
+  text-decoration:none;
+  font-family:'Inter',sans-serif;
 }
 
-.contact-button:hover {
-  background: #b04a6f;
-  color: #0f0f12;
+.contact-button:hover{
+  background:#ffffff;
+  color:#0a0a0a;
 }
 
 /* Mobile responsiveness */
@@ -648,11 +581,6 @@ const observer = new IntersectionObserver(entries => {
 
 sections.forEach(section => observer.observe(section));
 
-const glow = document.querySelector(".cursor-glow");
-document.addEventListener("mousemove", (e) => {
-  glow.style.left = e.clientX + "px";
-  glow.style.top = e.clientY + "px";
-});
 </script>
 
 </body>
