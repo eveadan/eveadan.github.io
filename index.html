@@ -474,10 +474,14 @@ footer {
 }
   /* ADD THIS RIGHT HERE */
 #contact .message-text {
-  text-align: left;
   width: 100%;
-  max-width: 700px;
-  margin: 0 auto 12px auto;
+  text-align: left;
+  margin: 0 0 12px 0;   /* remove auto centering */
+}
+  #contact form {
+  width: 100%;
+  max-width: 700px;   /* same width as your container layout */
+  margin: 0 auto;
 }
 
 .contact-button:hover{
