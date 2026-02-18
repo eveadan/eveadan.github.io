@@ -23,8 +23,21 @@ body {
 
 /* ===== BACKGROUND IMAGE ===== */
 .bg-image {
-  border: 5px solid red; /* temporary */
+  position: fixed;          /* make it cover the entire viewport */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("background.jpg"); /* make sure your image is exactly named this and in the same folder */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: grayscale(80%) blur(20px); /* optional blur/gray effect */
+  opacity: 0.35;           /* transparency so content is readable */
+  z-index: -1;             /* behind everything else */
+  border: 5px solid red;   /* temporary to see it, remove later */
 }
+
 
 section {
   background: rgba(0,0,0,0.55);
