@@ -433,11 +433,7 @@ footer {
   <div class="container">
     <h2>Contact</h2>
 
-    <!-- LinkedIn button -->
-  <div class="linkedin-block">
-  <a href="https://www.linkedin.com/in/eveadan" target="_blank" class="contact-button">LinkedIn</a>
-  <div class="message-text">Message Me</div>
-</div>
+    <div class="message-text">Message Me:</div>
 
     <!-- Contact form -->
     <form id="contactForm" action="https://formspree.io/f/xpqjrlod" method="POST">
@@ -447,46 +443,70 @@ footer {
       <button type="submit">Send Message</button>
     </form>
 
+    <!-- LinkedIn Circular Icon -->
+    <div class="linkedin-wrapper">
+      <a href="https://www.linkedin.com/in/eveadan" target="_blank" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24">
+          <path d="M4.98 3.5C4.98 4.88 3.86 6 2.48 6S0 4.88 0 3.5 1.12 1 2.48 1 4.98 2.12 4.98 3.5zM0 8h5v16H0V8zm7.5 0h4.7v2.2h.07c.66-1.25 2.28-2.56 4.7-2.56C21.4 7.64 24 9.8 24 14.3V24h-5v-8.6c0-2.05-.04-4.7-2.86-4.7-2.86 0-3.3 2.23-3.3 4.54V24h-5V8z"/>
+        </svg>
+      </a>
+    </div>
+
     <!-- Confirmation message -->
     <p id="formSuccess" style="display:none; margin-top:18px; color:#ffffff; font-weight:600;">
-
       Thanks! Your message has been sent.
     </p>
   </div>
 </section>
 
 <style>
-/* LinkedIn button styled like Send Message button */
-.contact-button {
-  display:inline-block;
-  padding:12px 30px;
-  border:1px solid rgba(255,255,255,0.3);
-  background:none;
-  color:#ffffff;
-  cursor:pointer;
-  text-transform:uppercase;
-  letter-spacing:2px;
-  border-radius:30px;
-  transition:.4s;
-  margin-bottom:18px;
-  text-decoration:none;
-  font-family:'Inter',sans-serif;
-}
-  /* ADD THIS RIGHT HERE */
+/* ===== CONTACT SECTION ===== */
+
 #contact .message-text {
   width: 100%;
   text-align: left;
-  margin: 0 0 12px 0;   /* remove auto centering */
+  margin: 40px 0 18px 0;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
 }
-  #contact form {
+
+/* Form width control */
+#contact form {
   width: 100%;
-  max-width: 700px;   /* same width as your container layout */
+  max-width: 700px;
   margin: 0 auto;
 }
 
-.contact-button:hover{
-  background:#ffffff;
-  color:#0a0a0a;
+/* LinkedIn circular icon */
+.linkedin-wrapper {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.linkedin-wrapper a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border: 1px solid rgba(255,255,255,0.6);
+  border-radius: 50%;
+  transition: .3s ease;
+}
+
+.linkedin-wrapper svg {
+  width: 22px;
+  height: 22px;
+  fill: #ffffff;
+}
+
+.linkedin-wrapper a:hover {
+  background: #ffffff;
+}
+
+.linkedin-wrapper a:hover svg {
+  fill: #000000;
 }
 
 /* Mobile responsiveness */
@@ -500,12 +520,12 @@ footer {
     margin-bottom: 20px;
   }
 
-  input, textarea, button, .contact-button {
+  input, textarea, button {
     width: 100%;
     font-size: 1rem;
   }
 
-  button, .contact-button {
+  button {
     padding: 14px 0;
   }
 }
