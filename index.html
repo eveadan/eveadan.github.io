@@ -6,15 +6,13 @@
 <title>Eve Adan | Portfolio</title>
 
 <link rel="icon" type="image/png" href="favicon-circle.png">
-
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
+* {margin:0; padding:0; box-sizing:border-box;}
 
 /* ===== BODY ===== */
-
-body{
+body {
   font-family:'Inter',sans-serif;
   background:#000;
   color:#f5f5f5;
@@ -24,223 +22,238 @@ body{
 }
 
 /* ===== BACKGROUND IMAGE ===== */
-.bg-image{
+.bg-image {
   position: fixed;
   inset: 0;
-  background: url("background.jpeg") center/cover no-repeat;
+  background: url("./background.jpeg") center/cover no-repeat;
   filter: grayscale(80%) blur(20px);
   opacity: 0.35;
   z-index: -3;
 }
 
-section{
-  background:rgba(0,0,0,0.55);
-  backdrop-filter:blur(6px);
+section {
+  background: rgba(0,0,0,0.55);
+  backdrop-filter: blur(6px);
 }
 
 /* ===== NAV ===== */
-
-nav{
-  position:fixed;
-  top:0;
-  width:100%;
-  background:rgba(248,246,243,.85);
-  backdrop-filter:blur(10px);
-  display:flex;
-  justify-content:center;
-  flex-wrap:wrap;
-  padding:18px 0;
-  border-bottom:1px solid rgba(0,0,0,.05);
-  z-index:1000;
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(248,246,243,.85);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(0,0,0,.05);
+  z-index: 1000;
 }
 
-nav a{
-  margin:8px 22px;
-  text-decoration:none;
-  color:#5a5a5a;
-  font-size:12px;
-  letter-spacing:4px;
-  text-transform:uppercase;
-  transition:.3s;
+nav a {
+  margin: 8px 22px;
+  text-decoration: none;
+  color: #5a5a5a;
+  font-size: 12px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  transition: .3s;
 }
 
-nav a:hover{
-  color:#000;
+nav a:hover {
+  color: #000;
 }
 
 /* ===== SECTIONS ===== */
-
-section{
-  min-height:100vh;
-  padding:160px 12% 100px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  opacity:0;
-  transform:translateY(60px);
-  transition:all 1.2s ease;
+section {
+  min-height: 100vh;
+  padding: 160px 12% 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 1.2s ease;
 }
 
-section.visible{
-  opacity:1;
-  transform:translateY(0);
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-.container{
-  max-width:800px;
+.container {
+  max-width: 800px;
 }
 
 /* ===== HEADINGS ===== */
-
-h1{
-  font-family:'Cormorant Garamond',serif;
-  font-size:5rem;
-  letter-spacing:3px;
-  font-weight:500;
-  text-shadow:0 0 25px rgba(255,255,255,0.08);
+h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 5rem;
+  letter-spacing: 3px;
+  font-weight: 500;
+  text-shadow: 0 0 25px rgba(255,255,255,0.08);
 }
 
-h2{
-  font-family:'Cormorant Garamond',serif;
-  font-size:2.8rem;
-  margin-bottom:50px;
-  font-weight:500;
-  letter-spacing:1px;
+h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.8rem;
+  margin-bottom: 50px;
+  font-weight: 500;
+  letter-spacing: 1px;
 }
 
 /* ===== TEXT ===== */
-
-p{
-  color:#d0d0d0;
+p {
+  color: #d0d0d0;
 }
 
-.divider{
-  width:40px;
-  height:1px;
-  background:#c8c2bb;
-  margin:30px auto;
+.divider {
+  width: 40px;
+  height: 1px;
+  background: #c8c2bb;
+  margin: 30px auto;
 }
 
 /* ===== PROJECTS ===== */
-
-.project{
-  margin-bottom:70px;
+.project {
+  margin-bottom: 70px;
 }
 
-.project strong{
-  font-family:'Cormorant Garamond',serif;
-  font-size:1.4rem;
-  font-weight:600;
-  color:#111;
+.project strong {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #111;
 }
 
 /* ===== BUTTONS ===== */
-
 .issue-link,
 button,
-.contact-button{
-  display:inline-block;
-  margin-top:14px;
-  padding:12px 32px;
-  border:1px solid #d6d0c9;
-  border-radius:40px;
-  font-size:.75rem;
-  letter-spacing:3px;
-  text-transform:uppercase;
-  color:#2c2c2c;
-  background:transparent;
-  transition:.35s ease;
-  text-decoration:none;
-  cursor:pointer;
+.contact-button {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 12px 32px;
+  border: 1px solid #d6d0c9;
+  border-radius: 40px;
+  font-size: .75rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #2c2c2c;
+  background: transparent;
+  transition: .35s ease;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .issue-link:hover,
 button:hover,
-.contact-button:hover{
-  background:#2c2c2c;
-  color:#fff;
+.contact-button:hover {
+  background: #2c2c2c;
+  color: #fff;
 }
 
 /* ===== SOCIAL ICONS ===== */
-
-.social-icons{
-  margin-top:22px;
+.social-icons {
+  margin-top: 22px;
 }
 
-.social-icons a{
-  margin:0 12px;
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  width:42px;
-  height:42px;
-  border:1px solid #e3ddd6;
-  border-radius:50%;
-  transition:.3s;
+.social-icons a {
+  margin: 0 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid #e3ddd6;
+  border-radius: 50%;
+  transition: .3s;
 }
 
-.social-icons svg{
-  width:18px;
-  height:18px;
-  fill:#444;
-  transition:.3s;
+.social-icons svg {
+  width: 18px;
+  height: 18px;
+  fill: #444;
+  transition: .3s;
 }
 
-.social-icons a:hover{
-  background:#2c2c2c;
+.social-icons a:hover {
+  background: #2c2c2c;
 }
 
-.social-icons a:hover svg{
-  fill:#fff;
+.social-icons a:hover svg {
+  fill: #fff;
 }
 
 /* ===== CONTACT ===== */
-
-#contact{
-  background:#f3f0ec;
+#contact {
+  background: #f3f0ec;
 }
 
-input,textarea{
-  width:100%;
-  padding:16px;
-  margin-bottom:20px;
-  background:#fff;
-  border:1px solid #e1dbd4;
-  color:#333;
-  font-family:'Inter',sans-serif;
-  border-radius:12px;
-  transition:.3s;
+input, textarea {
+  width: 100%;
+  padding: 16px;
+  margin-bottom: 20px;
+  background: #fff;
+  border: 1px solid #e1dbd4;
+  color: #333;
+  font-family: 'Inter', sans-serif;
+  border-radius: 12px;
+  transition: .3s;
 }
 
-input:focus,textarea:focus{
-  outline:none;
-  border-color:#b9b2aa;
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #b9b2aa;
+}
+
+/* LinkedIn button */
+.contact-button {
+  display: inline-block;
+  padding: 12px 30px;
+  border: 1px solid rgba(255,255,255,0.3);
+  background: none;
+  color: #ffffff;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 30px;
+  transition: .4s;
+  margin-bottom: 18px;
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+}
+
+.contact-button:hover {
+  background: #ffffff;
+  color: #0a0a0a;
 }
 
 /* ===== FOOTER ===== */
-
-footer{
-  text-align:center;
-  padding:60px 0;
-  font-size:.75rem;
-  color:#777;
+footer {
+  text-align: center;
+  padding: 60px 0;
+  font-size: .75rem;
+  color: #777;
 }
 
 /* ===== MOBILE ===== */
-
 @media (max-width:768px){
   h1{font-size:3.5rem}
   h2{font-size:2.2rem}
   section{padding:140px 8% 80px}
+  .container{padding:0 20px}
+  input, textarea, button, .contact-button{width:100%; font-size:1rem}
+  button, .contact-button{padding:14px 0}
 }
 
 @media (max-width:480px){
   h1{font-size:2.6rem}
-  h2{font-size:1.8rem}
+  h2{font-size:1.6rem}
+  p#formSuccess{font-size:.85rem}
 }
 </style>
-
 </head>
 
 <body>
