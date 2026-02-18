@@ -14,23 +14,22 @@
 /* ===== BODY ===== */
 body {
   font-family:'Inter',sans-serif;
-  background:#f8f6f3; /* lighter base to soften text visibility over image */
-  color:#2c2c2c;
+  background:#000; /* dark base */
+  color:#f5f5f5;   /* lighter text for contrast */
   scroll-behavior:smooth;
   overflow-x:hidden;
   position:relative;
 }
 
-/* subtle overlay + paper texture + background image */
+/* background image + dark overlay + subtle texture */
 body::before {
   content:"";
   position:fixed;
   inset:0;
-  background-image: url("./background.jpg"); /* your background image */
+  background-image: url("./background.jpg");
   background-size:cover;
   background-position:center;
   background-repeat:no-repeat;
-  opacity:0.25; /* subtle opacity so text is readable */
   z-index:-2;
 }
 
@@ -38,9 +37,15 @@ body::after {
   content:"";
   position:fixed;
   inset:0;
-  background: radial-gradient(circle at 20% 30%, rgba(0,0,0,.02), transparent 60%),
-              radial-gradient(circle at 80% 70%, rgba(0,0,0,.02), transparent 60%);
+  background: rgba(0,0,0,0.45); /* dark overlay to make text readable */
   z-index:-1;
+}
+
+/* optional subtle paper texture on top of overlay */
+body::after {
+  background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+              radial-gradient(circle at 20% 30%, rgba(255,255,255,.01), transparent 60%),
+              radial-gradient(circle at 80% 70%, rgba(255,255,255,.01), transparent 60%);
 }
 
 /* ===== NAV ===== */
@@ -48,20 +53,20 @@ nav {
   position:fixed;
   top:0;
   width:100%;
-  background:rgba(248,246,243,.85);
+  background:rgba(20,20,20,.85); /* darker nav for dark theme */
   backdrop-filter:blur(10px);
   display:flex;
   justify-content:center;
   flex-wrap:wrap;
   padding:18px 0;
-  border-bottom:1px solid rgba(0,0,0,.05);
+  border-bottom:1px solid rgba(255,255,255,.05);
   z-index:1000;
 }
 
 nav a {
   margin:8px 22px;
   text-decoration:none;
-  color:#5a5a5a;
+  color:#dcdcdc;
   font-size:12px;
   letter-spacing:4px;
   text-transform:uppercase;
@@ -69,7 +74,7 @@ nav a {
 }
 
 nav a:hover {
-  color:#000;
+  color:#fff;
 }
 
 /* ===== SECTIONS ===== */
@@ -83,7 +88,7 @@ section {
   opacity:0;
   transform:translateY(60px);
   transition:all 1.2s ease;
-  background: rgba(255,255,255,0.55); /* soft overlay for readability */
+  background: rgba(0,0,0,0.45); /* dark, semi-transparent overlay for readability */
   backdrop-filter: blur(6px);
 }
 
@@ -103,7 +108,7 @@ h1 {
   font-weight:500;
   margin-bottom:20px;
   letter-spacing:2px;
-  color:#111;
+  color:#f5f5f5;
 }
 
 h2 {
@@ -112,6 +117,7 @@ h2 {
   margin-bottom:50px;
   font-weight:500;
   letter-spacing:1px;
+  color:#f5f5f5;
 }
 
 /* ===== TEXT ===== */
@@ -119,13 +125,13 @@ p {
   font-size:1rem;
   line-height:1.9;
   margin-bottom:20px;
-  color:#444;
+  color:#ddd;
 }
 
 .divider {
   width:40px;
   height:1px;
-  background:#c8c2bb;
+  background:#bbb;
   margin:30px auto;
 }
 
@@ -138,7 +144,7 @@ p {
   font-family:'Cormorant Garamond',serif;
   font-size:1.4rem;
   font-weight:600;
-  color:#111;
+  color:#fff;
 }
 
 /* ===== BUTTONS ===== */
@@ -153,7 +159,7 @@ button,
   font-size:.75rem;
   letter-spacing:3px;
   text-transform:uppercase;
-  color:#2c2c2c;
+  color:#f5f5f5;
   background:transparent;
   transition:.35s ease;
   text-decoration:none;
@@ -163,8 +169,8 @@ button,
 .issue-link:hover,
 button:hover,
 .contact-button:hover {
-  background:#2c2c2c;
-  color:#fff;
+  background:#f5f5f5;
+  color:#0a0a0a;
 }
 
 /* ===== SOCIAL ICONS ===== */
@@ -179,7 +185,7 @@ button:hover,
   justify-content:center;
   width:42px;
   height:42px;
-  border:1px solid #e3ddd6;
+  border:1px solid #d6d0c9;
   border-radius:50%;
   transition:.3s;
 }
@@ -187,30 +193,30 @@ button:hover,
 .social-icons svg {
   width:18px;
   height:18px;
-  fill:#444;
+  fill:#ddd;
   transition:.3s;
 }
 
 .social-icons a:hover {
-  background:#2c2c2c;
+  background:#f5f5f5;
 }
 
 .social-icons a:hover svg {
-  fill:#fff;
+  fill:#0a0a0a;
 }
 
 /* ===== CONTACT ===== */
 #contact {
-  background:#f3f0ec;
+  background: rgba(0,0,0,0.45);
 }
 
 input,textarea {
   width:100%;
   padding:16px;
   margin-bottom:20px;
-  background:#fff;
-  border:1px solid #e1dbd4;
-  color:#333;
+  background:#1c1c1c;
+  border:1px solid #444;
+  color:#f5f5f5;
   font-family:'Inter',sans-serif;
   border-radius:12px;
   transition:.3s;
@@ -218,7 +224,7 @@ input,textarea {
 
 input:focus,textarea:focus {
   outline:none;
-  border-color:#b9b2aa;
+  border-color:#888;
 }
 
 /* ===== FOOTER ===== */
@@ -226,7 +232,7 @@ footer {
   text-align:center;
   padding:60px 0;
   font-size:.75rem;
-  color:#777;
+  color:#aaa;
 }
 
 /* ===== MOBILE ===== */
