@@ -22,15 +22,18 @@ body{
   overflow-x:hidden;
   position:relative;
 }
-  .bg-image{
+
+/* ===== BACKGROUND IMAGE ===== */
+.bg-image{
   position:fixed;
-  inset:-10%;
+  inset:0;
   background:url("background.jpg") center/cover no-repeat;
-  filter:grayscale(100%) blur(35px);
-  opacity:0.45;
+  filter:grayscale(80%) blur(20px);
+  opacity:0.35;
   z-index:-3;
 }
-  section{
+
+section{
   background:rgba(0,0,0,0.55);
   backdrop-filter:blur(6px);
 }
@@ -241,6 +244,9 @@ footer{
 </head>
 
 <body>
+
+<!-- BACKGROUND IMAGE -->
+<div class="bg-image"></div>
 
 <nav>
   <a href="#about">About</a>
