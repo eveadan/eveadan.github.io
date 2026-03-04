@@ -279,10 +279,11 @@ footer {
 }
 
 /* About section */
+/* ===== About Section Flex Layout ===== */
 .about-flex {
   display: flex;
   flex-direction: row;       /* left text, right image */
-  align-items: flex-start;   /* aligns top of image with first line of text */
+  align-items: flex-start;   /* top of text aligns with top of first paragraph */
   gap: 40px;
   flex-wrap: nowrap;         /* prevents image from dropping below text */
 }
@@ -290,15 +291,23 @@ footer {
 .about-text {
   flex: 1 1 0;               /* text takes remaining space */
   text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-paragraphs p:first-child {
+  margin-top: 0;             /* ensure first paragraph has no extra spacing */
 }
 
 .about-image-wrapper {
   flex: 0 0 auto;
   max-width: 400px;
-  align-self: flex-start;
-  margin-top: 2.8rem; /* pushes image to align with first paragraph */
+  display: flex;
+  align-items: flex-start;   /* aligns image top with first paragraph */
+  margin-top: 0;             /* reset old margin */
 }
 
+/* About image styling */
 .about-img {
   display: block;
   width: 100%;
@@ -306,7 +315,7 @@ footer {
   border: 6px solid #fff;    /* optional border */
 }
 
-/* Mobile responsiveness */
+/* ===== Mobile Responsiveness ===== */
 @media (max-width: 768px) {
   .about-flex {
     flex-direction: column;   /* stack text and image on mobile */
@@ -319,7 +328,8 @@ footer {
   }
 
   .about-image-wrapper {
-    max-width: 80%;           /* image scales nicely */
+    max-width: 80%;           /* image scales nicely on mobile */
+    margin-top: 0;            /* no top margin needed */
   }
 }
   
