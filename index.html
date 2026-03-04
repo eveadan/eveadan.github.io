@@ -319,17 +319,18 @@ footer {
 @media (max-width: 768px) {
   .about-flex {
     flex-direction: column;   /* stack text and image on mobile */
-    align-items: center;      /* center image */
+    align-items: flex-start;  /* align left, so image lines up with text */
     gap: 20px;
   }
 
   .about-text {
-    text-align: center;
+    text-align: left;
   }
 
   .about-image-wrapper {
-    max-width: 80%;           /* image scales nicely on mobile */
-    margin-top: 0;            /* no top margin needed */
+    max-width: 80%;
+    margin-top: 1rem;  /* small spacing so image doesn't sit right on top of text */
+    align-self: flex-start; /* keeps it aligned with text start */
   }
 }
   
