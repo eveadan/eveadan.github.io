@@ -282,9 +282,10 @@ footer {
 .about-flex {
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* image left, text right */
-  gap: 40px; /* space between image and text */
-  flex-wrap: wrap; /* ensures it doesn’t break on smaller screens */
+  justify-content: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+  flex-direction: row-reverse; /* ADD THIS to put text left, image right */
 }
 
 .about-image-wrapper {
