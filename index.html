@@ -239,9 +239,10 @@ footer {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
-  opacity: 0.15;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png"); /* or another noise texture */
+  opacity: 0.25; /* slightly stronger for more visible grain */
   pointer-events: none;
+  mix-blend-mode: overlay; /* lets it blend as grain rather than a color overlay */
 }
 
 .landing-img {
@@ -282,7 +283,12 @@ footer {
   width: 100%;
   max-width: 400px;
   margin-bottom: 40px;
-  border-radius: 20px;
+  border-radius: 0; /* remove rounded edges */
+  border: 6px solid #fff; /* white border */
+  display: block;
+  background: #fff; /* optional if you want a box behind */
+  box-sizing: border-box; /* ensures border doesn’t expand image size */
+  padding: 0; /* keep hard lines, no extra padding */
 }
   
 /* ===== MOBILE ===== */
