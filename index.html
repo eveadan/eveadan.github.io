@@ -279,16 +279,38 @@ footer {
 }
 
   /* About image */
+.about-flex {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* image left, text right */
+  gap: 40px; /* space between image and text */
+  flex-wrap: wrap; /* ensures it doesn’t break on smaller screens */
+}
+
+.about-image-wrapper {
+  flex: 0 0 400px; /* keeps image 400px wide */
+}
+
 .about-img {
   width: 100%;
-  max-width: 400px;
-  margin-bottom: 40px;
-  border-radius: 0; /* remove rounded edges */
-  border: 6px solid #fff; /* white border */
+  border-radius: 0; /* hard edges */
+  border: 6px solid #fff; /* optional white box effect */
   display: block;
-  background: #fff; /* optional if you want a box behind */
-  box-sizing: border-box; /* ensures border doesn’t expand image size */
-  padding: 0; /* keep hard lines, no extra padding */
+}
+
+.about-text {
+  flex: 1 1 400px; /* text takes remaining space */
+  text-align: left;
+}
+
+/* Optional: keep layout same on mobile */
+@media (max-width: 768px) {
+  .about-flex {
+    flex-wrap: nowrap; /* don’t stack */
+  }
+  .about-text {
+    text-align: left;
+  }
 }
   
 /* ===== MOBILE ===== */
@@ -334,9 +356,14 @@ footer {
 <section id="about">
   <div class="container">
 
-    <h1>Eve Adan</h1>
+    <div class="about-flex">
+      <div class="about-image-wrapper">
+        <img src="about.jpg" alt="About Image" class="about-img">
+      </div>
 
-    <div class="divider"></div>
+      <div class="about-text">
+        <h1>Eve Adan</h1>
+        <div class="divider"></div>
     <p>Hi, I’m Eve! I'm fluent in three languages and I’ve built experience across publishing and media marketing by contributing to brands including Disney and LensCrafters.</p>
     <p>I’m passionate about film, fashion, and written storytelling — bringing a multicultural perspective, strategic thinking, and refined communication skills to every project.</p>
     <p>With a foundation in media planning, campaign execution, and creative direction, I’m committed to collaboration, continuous growth, and delivering work that resonates &lt;3</p>
