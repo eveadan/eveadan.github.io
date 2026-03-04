@@ -293,8 +293,10 @@ footer {
 }
 
 .about-image-wrapper {
-  flex: 0 0 auto;            /* keeps image at natural size */
-  max-width: 400px;          /* optional max width */
+  flex: 0 0 auto;          /* keeps image natural size */
+  max-width: 400px;
+  align-self: flex-start;   /* aligns image to the top of flex item */
+  margin-top: 1.5rem;       /* push down to match paragraph top, tweak as needed */
 }
 
 .about-img {
@@ -364,16 +366,18 @@ footer {
 <section id="about">
   <div class="container">
 
-   <div class="about-flex">
+ <div class="about-flex">
   <div class="about-text">
     <h1>Eve Adan</h1>
     <div class="divider"></div>
+    <div class="about-paragraphs">
     <p>Hi, I’m Eve! I'm fluent in three languages and I’ve built experience across publishing and media marketing by contributing to brands including Disney and LensCrafters.</p>
     <p>I’m passionate about film, fashion, and written storytelling — bringing a multicultural perspective, strategic thinking, and refined communication skills to every project.</p>
     <p>With a foundation in media planning, campaign execution, and creative direction, I’m committed to collaboration, continuous growth, and delivering work that resonates &lt;3</p>
   </div>
+  </div>
 
-   <div class="about-image-wrapper">
+  <div class="about-image-wrapper">
     <img src="about.jpg" alt="About Image" class="about-img">
   </div>
 </div>
