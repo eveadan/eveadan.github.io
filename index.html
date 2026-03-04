@@ -281,11 +281,9 @@ footer {
   /* About image */
 .about-flex {
   display: flex;
-  align-items: flex-start; /* top align text and image */
-  justify-content: space-between;
-  gap: 40px;
-  flex-direction: row-reverse; /* text left, image right */
-  flex-wrap: nowrap; /* prevents stacking */
+  align-items: flex-start; /* top-aligns image with text */
+  gap: 40px; 
+  flex-wrap: wrap;
 }
 
 .about-text {
@@ -365,7 +363,7 @@ footer {
 <section id="about">
   <div class="container">
 
-    <div class="about-flex">
+   <div class="about-flex">
   <div class="about-text">
     <h1>Eve Adan</h1>
     <div class="divider"></div>
@@ -374,7 +372,7 @@ footer {
     <p>With a foundation in media planning, campaign execution, and creative direction, I’m committed to collaboration, continuous growth, and delivering work that resonates &lt;3</p>
   </div>
 
-  <div class="about-image-wrapper">
+   <div class="about-image-wrapper">
     <img src="about.jpg" alt="About Image" class="about-img">
   </div>
 </div>
