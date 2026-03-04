@@ -278,45 +278,46 @@ footer {
   color: #000;
 }
 
-  /* About image */
+/* About section */
 .about-flex {
   display: flex;
-  align-items: flex-start; /* top-aligns image with text */
-  gap: 40px; 
-  flex-wrap: wrap;
+  flex-direction: row;       /* left text, right image */
+  align-items: flex-start;   /* aligns top of image with first line of text */
+  gap: 40px;
+  flex-wrap: nowrap;         /* prevents image from dropping below text */
 }
 
 .about-text {
-  flex: 1; /* takes available space */
+  flex: 1 1 0;               /* text takes remaining space */
   text-align: left;
 }
 
 .about-image-wrapper {
-  flex: 0 0 400px; /* fixed image width */
-}
-.about-image-wrapper {
-  flex: 0 0 400px; /* keeps image 400px wide */
+  flex: 0 0 auto;            /* keeps image at natural size */
+  max-width: 400px;          /* optional max width */
 }
 
 .about-img {
-  width: 100%;
-  border-radius: 0; /* hard edges */
-  border: 6px solid #fff; /* optional white box effect */
   display: block;
+  width: 100%;
+  height: auto;
+  border: 6px solid #fff;    /* optional border */
 }
 
-.about-text {
-  flex: 1 1 400px; /* text takes remaining space */
-  text-align: left;
-}
-
-/* Optional: keep layout same on mobile */
+/* Mobile responsiveness */
 @media (max-width: 768px) {
   .about-flex {
-    flex-wrap: nowrap; /* don’t stack */
+    flex-direction: column;   /* stack text and image on mobile */
+    align-items: center;      /* center image */
+    gap: 20px;
   }
+
   .about-text {
-    text-align: left;
+    text-align: center;
+  }
+
+  .about-image-wrapper {
+    max-width: 80%;           /* image scales nicely */
   }
 }
   
