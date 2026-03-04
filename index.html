@@ -220,6 +220,61 @@ footer {
   color: rgba(255,255,255,0.6);
 }
 
+  /* ===== LANDING SECTION ===== */
+.landing {
+  height: 100vh;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.landing-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.landing-img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.landing-buttons {
+  position: absolute;
+  bottom: 60px;
+  width: 100%;
+  text-align: center;
+}
+
+.landing-buttons a {
+  margin: 0 20px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 12px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  border: 1px solid rgba(255,255,255,0.7);
+  padding: 12px 28px;
+  border-radius: 40px;
+  backdrop-filter: blur(6px);
+  transition: .3s ease;
+}
+
+.landing-buttons a:hover {
+  background: #fff;
+  color: #000;
+}
+
+  /* About image */
+.about-img {
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 40px;
+  border-radius: 20px;
+}
+  
 /* ===== MOBILE ===== */
 @media (max-width:768px){
   h1{font-size:3.5rem}
@@ -248,13 +303,32 @@ footer {
   <a href="#contact">Contact</a>
 </nav>
 
+<section id="home" class="landing">
+  <div class="landing-content">
+    <img src="landing.jpg" alt="Landing Image" class="landing-img">
+
+    <div class="landing-buttons">
+      <a href="#about">About</a>
+      <a href="#editorial">Editorial</a>
+      <a href="#marketing">Marketing</a>
+      <a href="#film">Film</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</section>
+
 <section id="about">
   <div class="container">
+
+    <img src="about.jpg" alt="About Image" class="about-img">
+
     <h1>Eve Adan</h1>
+
     <div class="divider"></div>
     <p>Hi, I’m Eve! I'm fluent in three languages and I’ve built experience across publishing and media marketing by contributing to brands including Disney and LensCrafters.</p>
     <p>I’m passionate about film, fashion, and written storytelling — bringing a multicultural perspective, strategic thinking, and refined communication skills to every project.</p>
     <p>With a foundation in media planning, campaign execution, and creative direction, I’m committed to collaboration, continuous growth, and delivering work that resonates &lt;3</p>
+
   </div>
 </section>
 
