@@ -295,12 +295,8 @@ footer {
 .about-image-wrapper {
   flex: 0 0 auto;
   max-width: 400px;
-
-  /* Align image with the first paragraph, not the H1 */
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start; /* ensures top alignment */
-  margin-top: 2.8rem; /* tweak this to match top of paragraph */
+  align-self: flex-start;
+  margin-top: 2.8rem; /* pushes image to align with first paragraph */
 }
 
 .about-img {
