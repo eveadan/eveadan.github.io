@@ -281,13 +281,21 @@ footer {
   /* About image */
 .about-flex {
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  align-items: flex-start; /* top align text and image */
+  justify-content: space-between;
   gap: 40px;
-  flex-wrap: wrap;
-  flex-direction: row-reverse; /* ADD THIS to put text left, image right */
+  flex-direction: row-reverse; /* text left, image right */
+  flex-wrap: nowrap; /* prevents stacking */
 }
 
+.about-text {
+  flex: 1; /* takes available space */
+  text-align: left;
+}
+
+.about-image-wrapper {
+  flex: 0 0 400px; /* fixed image width */
+}
 .about-image-wrapper {
   flex: 0 0 400px; /* keeps image 400px wide */
 }
