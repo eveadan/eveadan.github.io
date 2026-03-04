@@ -316,21 +316,21 @@ footer {
 }
 
 /* ===== Mobile Responsiveness ===== */
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   .about-flex {
-    flex-direction: column;   /* stack text and image on mobile */
-    align-items: flex-start;  /* align left, so image lines up with text */
+    flex-direction: column;   /* stack text and image */
+    align-items: center;      /* center everything on mobile */
     gap: 20px;
   }
 
   .about-text {
-    text-align: left;
+    text-align: center;       /* center the text */
   }
 
   .about-image-wrapper {
     max-width: 80%;
-    margin-top: 1rem;  /* small spacing so image doesn't sit right on top of text */
-    align-self: flex-start; /* keeps it aligned with text start */
+    margin-top: 1rem;         /* keep small spacing above image */
+    align-self: center;       /* center the image under text */
   }
 }
   
