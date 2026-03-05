@@ -223,20 +223,20 @@ footer {
 .landing {
   height: 100vh;            /* full viewport height */
   display: flex;
-  flex-direction: column;   /* ensures vertical stacking */
-  justify-content: center;  /* centers content vertically */
-  align-items: center;      /* centers content horizontally */
+  justify-content: center;   /* vertical centering */
+  align-items: center;       /* horizontal centering */
+  padding: 0;                /* remove extra top/bottom padding */
   overflow: hidden;
-  padding: 0 20px;          /* optional horizontal padding */
 }
   
 .landing-img {
-  width: 60-80%;           /* smaller than full width */
-  max-width: 600px;        /* optional max size */
-  height: auto;            /* keep aspect ratio */
-  object-fit: contain;     /* fits inside without cropping */
+  width: 70%;           /* adjust to your liking */
+  max-width: 600px;     
+  height: auto;         
+  object-fit: contain;  /* keeps it fully visible */
+  object-position: center; /* center it exactly */
   display: block;
-  margin: 0 auto;          /* horizontal center */
+  margin: 0 auto;
 }
   
 .landing-content {
@@ -348,6 +348,17 @@ footer {
 @media (max-width:480px){
   h1{font-size:2.6rem}
   h2{font-size:1.8rem}
+}
+
+@media (max-width:480px){
+  h1{font-size:2.6rem}
+  h2{font-size:1.8rem}
+
+  /* Landing image mobile */
+  .landing-img {
+    width: 90%;
+    max-width: 350px;
+  }
 }
   
 </style>
