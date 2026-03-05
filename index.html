@@ -219,15 +219,26 @@ footer {
 }
 
   /* ===== LANDING SECTION ===== */
+/* ===== LANDING SECTION ===== */
 .landing {
-  height: 100svh;
-  padding: 0;
+  height: auto;          /* allow the section to shrink based on image */
+  padding: 120px 0;      /* top/bottom spacing */
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
 }
 
+.landing-img {
+  width: 80%;           /* smaller width */
+  max-width: 600px;     /* optional, prevents it from getting too big */
+  height: auto;         /* keeps aspect ratio */
+  object-fit: contain;  /* makes sure it fits inside without cropping */
+  object-position: center; /* centers it */
+  display: block;
+  margin: 0 auto;       /* centers horizontally */
+}
+  
 .landing-content {
   position: relative;
   width: 100%;
@@ -242,15 +253,6 @@ footer {
   opacity: 0.25; /* slightly stronger for more visible grain */
   pointer-events: none;
   mix-blend-mode: overlay; /* lets it blend as grain rather than a color overlay */
-}
-
-.landing-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 30%;  /* THIS controls crop */
-  filter: contrast(105%);
-  display: block;
 }
   
 .landing-buttons {
