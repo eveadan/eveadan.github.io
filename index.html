@@ -221,11 +221,13 @@ footer {
 
   /* ===== LANDING SECTION ===== */
 .landing {
-  height: 100vh;
+  min-height: 100vh;
+  min-height: 100svh;   /* fixes mobile viewport gap */
   padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 .landing-content {
@@ -246,9 +248,11 @@ footer {
 
 .landing-img {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   object-fit: cover;
+  object-position: center 30%;  /* THIS controls crop */
   filter: contrast(105%);
+  display: block;
 }
   
 .landing-buttons {
@@ -339,9 +343,6 @@ footer {
   h2{font-size:2.2rem}
   section{padding:140px 8% 80px}
 
-  .landing-img {
-    object-fit: cover;
-  }
 }
 
 @media (max-width:480px){
