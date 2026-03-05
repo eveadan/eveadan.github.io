@@ -19,10 +19,11 @@
 /* ===== BODY & BACKGROUND ===== */
 body {
   font-family: 'Inter', sans-serif;
-  background: none;
+  background: #000; /* fallback so no white flash */
   color: #f5f5f5;
   scroll-behavior: smooth;
   overflow-x: hidden;
+  min-height: 100svh;
 }
 
 /* FULL IMAGE — NO OVERLAY */
@@ -356,7 +357,6 @@ footer {
 <body>
 
 <!-- BACKGROUND IMAGE -->
-<div class="bg-image"></div>
 
 <nav>
   <a href="#home">Home</a>
