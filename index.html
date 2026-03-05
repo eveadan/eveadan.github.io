@@ -224,12 +224,16 @@ footer {
 
   /* ===== LANDING SECTION ===== */
 .landing {
-  min-height: 100vh;
-  padding-top: 80px;   /* space for fixed nav */
-  padding-bottom: 0;
+  min-height: 100svh;
+  padding-top: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+  @supports (-webkit-touch-callout: none) {
+  .landing {
+    min-height: -webkit-fill-available;
+  }
 }
   
 .landing-img {
