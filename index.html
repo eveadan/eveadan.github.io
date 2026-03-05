@@ -221,22 +221,22 @@ footer {
   /* ===== LANDING SECTION ===== */
 /* ===== LANDING SECTION ===== */
 .landing {
-  height: auto;          /* allow the section to shrink based on image */
-  padding: 120px 0;      /* top/bottom spacing */
+  height: 100vh;            /* full viewport height */
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;   /* ensures vertical stacking */
+  justify-content: center;  /* centers content vertically */
+  align-items: center;      /* centers content horizontally */
   overflow: hidden;
+  padding: 0 20px;          /* optional horizontal padding */
 }
-
+  
 .landing-img {
-  width: 80%;           /* smaller width */
-  max-width: 600px;     /* optional, prevents it from getting too big */
-  height: auto;         /* keeps aspect ratio */
-  object-fit: contain;  /* makes sure it fits inside without cropping */
-  object-position: center; /* centers it */
+  width: 60-80%;           /* smaller than full width */
+  max-width: 600px;        /* optional max size */
+  height: auto;            /* keep aspect ratio */
+  object-fit: contain;     /* fits inside without cropping */
   display: block;
-  margin: 0 auto;       /* centers horizontally */
+  margin: 0 auto;          /* horizontal center */
 }
   
 .landing-content {
