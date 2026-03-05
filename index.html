@@ -221,8 +221,8 @@ footer {
   /* ===== LANDING SECTION ===== */
 /* ===== LANDING SECTION ===== */
 .landing {
-  height: calc(100vh - 80px);
-  margin-top: 80px;
+  min-height: 100svh;
+  padding-top: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -342,6 +342,9 @@ footer {
   h2{font-size:2.2rem}
   section{padding:140px 8% 80px}
 
+ .landing {
+  padding-top: 70px;
+}
 }
 
 @media (max-width:480px){
@@ -354,9 +357,10 @@ footer {
   h2{font-size:1.8rem}
 
   /* Landing image mobile */
-  .landing-img {
-    width: 90%;
-    max-width: 350px;
+    .landing-img {
+    width: 92%;
+    max-width: 380px;
+    margin: 0 auto;
   }
 }
   
